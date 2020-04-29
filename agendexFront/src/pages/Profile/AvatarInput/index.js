@@ -15,7 +15,7 @@ export default function AvatarInput() {
   useEffect(() => { 
     if (ref.current) {
       registerField({
-        name: 'avatar',
+        name: 'avatar_id',
         ref: ref.current,
         path: 'dataset.file',
 
@@ -43,7 +43,7 @@ export default function AvatarInput() {
   <label htmlFor="avatar">
     <img src={ preview || 'https://api.adorable.io/avatars/50/abott@adorable.png'} />
 
-    <input type="file" id="avatar" accept="image/*" data-file={file} ref={ref} onChange={handleChange} />
+    <input type="file" id="avatar" accept="image/*" data-file={file} onChange={handleChange} ref={ref}  />
   </label>
 </Container>
   );
